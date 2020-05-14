@@ -1,14 +1,16 @@
 import React, {FC} from 'react';
+import styled from '@emotion/styled';
+import {Title} from './styles';
 
 interface GreetingsProps{
     name: string;
-    lastname: string;
+    lastname?: string;
 }
 
 const Greetings:FC<GreetingsProps> = ({name, lastname}) => {
     return (
         <div>
-            <h1> Hello {name} {lastname}</h1>
+            <Title> Hello {name} {lastname}</Title>
         </div>
     );
 };

@@ -2,10 +2,16 @@ import React from 'react';
 import './App.css';
 import Greetings from "./components/Greetings/Greetings";
 
+const propiedades = {
+    name: 'Maria',
+    lastname: 'Soria'
+}
+
+
 function App() {
   return (
     <div className="App">
-      <Greetings name={'Maria'} lastname={'Soria'}>  </Greetings>
+      <Greetings {...propiedades}>  </Greetings>
     </div>
   );
 }
