@@ -1,5 +1,4 @@
 import React, {FC} from 'react';
-import styled from '@emotion/styled';
 import {Title} from './styles';
 
 interface GreetingsProps{
@@ -10,7 +9,7 @@ interface GreetingsProps{
 const Greetings:FC<GreetingsProps> = ({name, lastname}) => {
     return (
         <div>
-            <Title> Hello {name} {lastname}</Title>
+            <Title aria-label={'greetings'}> Hello {name} {lastname}</Title>
         </div>
     );
 };
