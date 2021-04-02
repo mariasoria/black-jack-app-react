@@ -4,21 +4,19 @@ import Card, {ARIA_LABEL} from "./Card";
 
 
 describe ('Card', () => {
-    it('render the component', function() {
+    it('should display the component', function() {
         // GIVEN
-       const renderResult = render (<Card stick={"♥"} rank={2}/>);
+       const renderResult:RenderResult = render (<Card suit={"♥"} rank={6}/>);
        // WHEN
         // THEN
        expect (renderResult.queryByLabelText(ARIA_LABEL)).toBeTruthy();
     });
     it('it should display a hearts card with the number 6', function() {
         // GIVEN
-        const renderResult = render (<Card stick={"♥"} rank={6}/>);
-        const nameText = '6';
-        const regex = new RegExp(nameText);
+        const renderResult:RenderResult = render (<Card suit={"♥"} rank={6}/>);
         // WHEN
         // THEN
-        expect (renderResult.getByText(/♥/i)).toBeTruthy();
-        expect (renderResult.getByText(nameText)).toBeTruthy();
+        expect (renderResult.getByText(/♥/i)).toBeInTheDocument();
+        expect (renderResult.getByText(/6/i)).toBeInTheDocument();
     });
 });

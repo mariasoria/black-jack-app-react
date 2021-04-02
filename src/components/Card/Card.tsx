@@ -6,10 +6,11 @@ import {CardProps} from "./types";
 // luego se ve en el inspector de la web
 export const ARIA_LABEL = 'card';
 
-const Card:FC<CardProps> = ({stick, rank}) => {
+// los parámetros que le estoy pasando los pongo entre {} para hacer el destructuring directamente
+const Card:FC<CardProps> = ({suit, rank}) => {
     return(
         <BodyCard>
-            <Value aria-label={ARIA_LABEL} color={stick}>{rank}{stick}</Value>
+            <Value aria-label={ARIA_LABEL} color={suit}>{rank}{suit}</Value>
         </BodyCard>
     );
 };

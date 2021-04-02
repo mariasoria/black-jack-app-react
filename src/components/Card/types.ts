@@ -1,9 +1,9 @@
-type StickCard = '♥' | '♠' | '♦' | '♣';
+type SuitCard = '♥' | '♠' | '♦' | '♣';
 
-// "stick" = "suit"
+// "suit" = "suit"
 
 export interface CardProps {
-    // "StickCard" y el "2" son los valores por defecto en caso de que no reciba nada
-    stick: StickCard | string;
+    // "SuitCard" y el "2" son los valores por defecto en caso de que no reciba nada
+    suit: SuitCard | string;
     rank: 2 | number;
 }

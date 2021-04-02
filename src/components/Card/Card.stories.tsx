@@ -20,13 +20,13 @@ export default {
 
 const numberAtb = {
   label: 'Value',
-  defaultValue: 9,
+  defaultValue: 6,
   options: {
     range: true,
     min: 1,
     max: 13,
     step: 1,
-  }
+  },
 };
 
 const selectAtb = {
@@ -40,10 +40,11 @@ const selectAtb = {
   defaultValue: '♥',
 };
 
-export const Default = () => <Card stick={select(selectAtb.label, selectAtb.options, selectAtb.defaultValue)}
+
+export const Default = () => <Card suit={select(selectAtb.label, selectAtb.options, selectAtb.defaultValue)}
                                    rank={number(numberAtb.label, numberAtb.defaultValue, numberAtb.options)}/>;
 
 const VALUE_NUMBER =  '1,2,3,4,5,6,7,8,9,10,11,12,13'.split(",").map(value => parseInt(value));
 export const Deck = () => VALUE_NUMBER.map(rank => <Card key={rank}
-                                                         stick={select(selectAtb.label, selectAtb.options, selectAtb.defaultValue)}
+                                                         suit={select(selectAtb.label, selectAtb.options, selectAtb.defaultValue)}
                                                          rank={rank}/>);

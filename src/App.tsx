@@ -13,6 +13,7 @@ function App() {
   return (
       <div className="App">
           <Greetings {...propiedades}>  </Greetings>
+          <Card suit={"♥"} rank={6}></Card>
       </div>
   );
 }
